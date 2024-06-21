@@ -1,0 +1,54 @@
+* {
+    border: none;
+    font-family: Arimo Nerd Font;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+window#waybar {
+    background-color: #1D2021;
+    /* background-color: rgba(17, 17, 17, 1); */
+    opacity: 1;
+    transition-duration: .5s;
+    border-radius: 0px;
+}
+
+#workspaces button {
+    padding: 0px;
+    background-color: transparent;
+    min-width: 36px;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button.active {
+    padding: 0 0 0 0;
+    border-bottom: 3px solid white;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: white;
+    color: #323232;
+}
+
+#workspaces {
+    min-height: 35px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 10px;
+}
+
+#clock {
+    margin-right: 25px;
+}
+
+#custom-media {
+    min-width: 100px;
+}
