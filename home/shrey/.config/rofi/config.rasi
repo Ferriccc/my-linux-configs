@@ -8,6 +8,7 @@ configuration {
     display-emoji:              "🙂 EMOJI";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
+    font: "CaskaydiaCove Nerd Font 12";
 }
 
 @import                          "shared/colors.rasi"
