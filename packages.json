@@ -2,6 +2,7 @@
     "packages": [
         "FIRST_ENTRY_DO_NOT_TOUCH_THIS",
         "apple-fonts",
+        "ttf-cascadia-code-nerd",
         "bash-language-server",
         "bat",
         "blueman",
@@ -49,7 +50,7 @@
         "waybar",
         "wget",
         "wl-clipboard",
-        "wofi",
+        "rofi-lbonn-wayland-git",
         "xdg-desktop-portal-hyprland",
         "zoxide",
         "cliphist",
