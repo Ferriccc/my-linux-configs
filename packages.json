@@ -59,6 +59,7 @@
         "linux-zen-headers",
         "pavucontrol",
         "eog",
-        "python-jsondiff"
+        "python-jsondiff",
+        "sassc"
     ]
 }
