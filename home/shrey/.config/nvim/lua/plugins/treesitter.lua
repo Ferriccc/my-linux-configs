@@ -25,7 +25,10 @@ return {
 				"bash",
 				"lua",
 				"cpp",
+				"css",
 				"javascript",
+				"toml",
+				"python",
 			},
 		})
 	end,

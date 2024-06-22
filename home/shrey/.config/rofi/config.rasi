@@ -1,8 +1,8 @@
 configuration {
-	modi:                       "drun,window,filebrowser";
+	modi:                       "drun,run,window,filebrowser";
     show-icons:                 true;
     display-drun:               "💻 APPS";
-    display-run:                "🎩 RUN";
+    display-run:                " RUN";
     display-filebrowser:        "🗃️ FILES";
     display-window:             "🪟 WINDOWS";
     display-emoji:              "🙂 EMOJI";

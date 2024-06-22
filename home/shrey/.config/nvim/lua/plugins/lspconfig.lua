@@ -113,6 +113,9 @@ return {
         -- configure jsonls server
         lspconfig["jsonls"].setup({})
 
+        -- configure toml server
+        lspconfig["taplo"].setup({})
+
         -- configure rust server
         lspconfig["rust_analyzer"].setup({
             on_attach = on_attach,

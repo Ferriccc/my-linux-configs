@@ -155,13 +155,12 @@ int tt = 1; void solve(); void presolve(); int main() { cin.tie(0)->ios_base::sy
 
 // clang-format on
 
-void presolve() { print(1); }
+void presolve() {}
 
 void solve() {
-    int n = uid(1, 5);
-    int c = uid(1, 5);
-    print(n, c);
-    vi a(n);
-    f0r(i, n) a[i] = uid(1, 3);
-    print(a);
+    int n = 5;
+    string s = "ABCDE";
+    shuffle(s.begin(), s.end(), rng);
+    print(n, 7);
+    print(s);
 }

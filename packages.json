@@ -61,6 +61,7 @@
         "pavucontrol",
         "eog",
         "python-jsondiff",
-        "sassc"
+        "sassc",
+        "hyprlock"
     ]
 }

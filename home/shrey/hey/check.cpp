@@ -141,38 +141,12 @@ template <typename T> using mpq = priority_queue<T, vector<T>, greater<T>>;
 template <typename T, int N> using ar = array<T, N>;
 
 // clang-format on
-
-const int N = 5001;
-
-int ans[N];
-int xy[N][2];
-int n;
-
-bool acute(int i) {
-    int x = ans[i];
-    int y = ans[i + 1];
-    int z = ans[i + 2];
-
-    int val = ((xy[z][0] - xy[y][0]) * (xy[y][0] - xy[x][0]) +
-               (xy[z][1] - xy[y][1]) * (xy[y][1] - xy[x][1]));
-
-    if (val < 0)
-        return true;
-    else
-        return false;
-}
-
 int main() {
-    ifstream in(".qt/input.txt");
-
-    in >> n;
-    f0r(i, 1, n + 1) in >> xy[i][0] >> xy[i][1];
-
-    f0r(i, 1, n + 1) cin >> ans[i];
-
-    f0r(i, 1, n - 1) if (!acute(i)) {
-        print("NO");
+    char x;
+    cin >> x;
+    if (x == '!') {
+        print("YES");
         return 0;
     }
-    print("YES");
+    print("NO");
 }
