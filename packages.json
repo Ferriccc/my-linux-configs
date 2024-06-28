@@ -39,11 +39,11 @@
     "acpi_call-dkms",
     "linux-zen-headers",
     "python-jsondiff",
-    "kde-material-you-colors",
     "plasma6-applets-plasmusic-toolbar",
     "xorg-xlsclients",
     "mpv",
     "yt-dlp",
-    "kitty"
+    "kitty",
+    "kcalc"
   ]
 }
