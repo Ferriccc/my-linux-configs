@@ -1,4 +1,6 @@
 #!/bin/bash
 
-su -c 'echo "\_SB.AMWW.WMAX 0 0x15 {1, 0xab, 0x00, 0x00}" > /proc/acpi/call'
-su -c 'echo "\_SB.AMWW.WMAX 0 0x25 {1, 0x01, 0x00, 0x00}" > /proc/acpi/call'
+export SUDO_ASKPASS=configs/home/shrey/scripts/askPass.sh
+
+sudo -A su -c 'echo "\_SB.AMWW.WMAX 0 0x15 {1, 0xab, 0x00, 0x00}" > /proc/acpi/call'
+sudo -A su -c 'echo "\_SB.AMWW.WMAX 0 0x25 {1, 0x01, 0x00, 0x00}" > /proc/acpi/call'
