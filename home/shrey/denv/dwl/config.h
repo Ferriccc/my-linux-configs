@@ -47,8 +47,6 @@ static const Rule rules[] = {
 static const Layout layouts[] = {
     /* symbol     arrange function */
     {"[]=", tile},
-    {"><>", NULL}, /* no layout function means floating behavior */
-    {"[M]", monocle},
 };
 
 /* monitors */
@@ -160,11 +158,8 @@ static const Key keys[] = {
     {MODKEY, XKB_KEY_d, incnmaster, {.i = -1}},
     {MODKEY, XKB_KEY_h, setmfact, {.f = -0.05f}},
     {MODKEY, XKB_KEY_l, setmfact, {.f = +0.05f}},
-    {MODKEY, XKB_KEY_Return, zoom, {0}},
     {MODKEY, XKB_KEY_Tab, view, {0}},
     {MODKEY, XKB_KEY_q, killclient, {0}},
-    {MODKEY, XKB_KEY_t, setlayout, {.v = &layouts[0]}},
-    {MODKEY, XKB_KEY_m, setlayout, {.v = &layouts[2]}},
     {0, XKB_KEY_XF86MonBrightnessUp, spawn, SHCMD("brightnessctl s 5%+")},
     {0, XKB_KEY_XF86MonBrightnessDown, spawn, SHCMD("brightnessctl s 5%-")},
     {0, XKB_KEY_XF86AudioMedia, spawn, SHCMD("playerctl play-pause")},
