@@ -2,6 +2,15 @@
   "packages": [
     "FIRST_ENTRY_DO_NOT_TOUCH_THIS",
     "bat",
+    "pkg-config",
+    "libinput",
+    "wayland",
+    "wayland-protocols",
+    "wlroots",
+    "kitty",
+    "wlr-randr",
+    "libxkbcommon",
+    "fcft",
     "blueman",
     "bluez",
     "bluez-utils",
@@ -25,6 +34,8 @@
     "spotify-adblock",
     "swww",
     "trash-cli",
+    "noto-fonts",
+    "noto-fonts-emoji",
     "ttf-jetbrains-mono-nerd",
     "unzip",
     "wget",
@@ -34,6 +45,10 @@
     "linux-zen-headers",
     "pavucontrol",
     "python-jsondiff",
-    "playerctl"
+    "playerctl",
+    "wmenu",
+    "grim",
+    "slurp",
+    "fastfetch"
   ]
 }
