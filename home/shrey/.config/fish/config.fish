@@ -26,5 +26,6 @@ function chk
 end
 
 alias cat="bat"
-alias ls="eza -l --git --color=always --icons=always --sort=extension --no-user --no-permissions"
+alias ls="exa -l --git --color=always --icons=always --sort=extension --no-user --no-permissions"
+alias lt="exa --tree -l --git --color=always --icons=always --sort=extension --no-permissions --no-user"
 alias cd="z"
