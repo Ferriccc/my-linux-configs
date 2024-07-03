@@ -47,8 +47,10 @@
     "python-jsondiff",
     "playerctl",
     "wmenu",
-    "grim",
+    "fastfetch",
+    "xdg-desktop-portal",
+    "thunar",
     "slurp",
-    "fastfetch"
+    "grim"
   ]
 }
