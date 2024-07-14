@@ -40,5 +40,8 @@ keymap.set("n", "<leader>gc", "<cmd> Telescope git_branches <cr>", opts)
 keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <cr>", opts)
 -- keymap.set("n", "<leader>fh", "<cmd> Telescope help_tags  <cr>", opts)
 
--- Compile and Run
-keymap.set("n", "<C-0>", ":w <bar> :!g++ -DLOCAL % && ./a.out < in.txt && trash ./a.out<cr>", opts)
+-- Compile and Run (linux)
+keymap.set("n", "<C-0>", ":w <bar> :!g++ % && ./a.out < in.txt && trash ./a.out<cr>", opts)
+
+-- Compile and Run (wsl / windows)
+keymap.set("n", "<F10>", ":w <bar> :!g++ % && ./a.out < in.txt && trash ./a.out<cr>", opts)
