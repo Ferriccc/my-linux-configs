@@ -1,7 +1,0 @@
-{
-    "services": [
-        "FIRST_ENTRY_DO_NOT_TOUCH_THIS",
-        "bluetooth.service",
-        "powertop.service"
-    ]
-}
