@@ -71,4 +71,4 @@ add_cmd = "git clone #1 #2"
 
 [[git.list]]
 repo_url = "https://aur.archlinux.org/paru.git"
-clone_dir = "/home/G15/paru"
+clone_dir = "/home/shrey/paru"
