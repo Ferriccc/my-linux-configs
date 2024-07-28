@@ -1,0 +1,67 @@
+[copper] 
+generation_store_dir = "/home/shrey/.copper"
+max_generations = 3                          
+
+[system_packages]
+add_cmd = "paru -S --noconfirm --needed #1"
+del_cmd = "paru -R --noconfirm #1"
+list = [
+    "pkg-config",
+    "bear",
+    "bash-language-server",
+    "bluez",
+    "bluez-utils",
+    "clang",
+    "curl",
+    "google-chrome",
+    "exa",
+    "starship",
+    "fzf",
+    "github-cli",
+    "kcalc",
+    "htop",
+    "kitty",
+    "less",
+    "llvm",
+    "man",
+    "neovim",
+    "nitch-git",
+    "npm",
+    "python-pynvim",
+    "ripgrep",
+    "spotify-adblock",
+    "tldr",
+    "trash-cli",
+    "ttf-jetbrains-mono-nerd",
+    "unzip",
+    "visual-studio-code-bin",
+    "wget",
+    "wl-clipboard",
+    "zoxide",
+    "acpi_call-dkms",
+    "linux-zen-headers",
+]
+
+[systemd_services]
+add_cmd = "sudo systemctl enable --now #1"
+del_cmd = "sudo systemctl disable --now #1"
+list = ["bluetooth.service"]
+
+[symlinks] 
+exclude = [
+  "config\\.toml",
+  "\\.git.*"
+]
+
+[git]
+add_cmd = "git clone #1 #2"
+del_cmd = "rm -rf #1"
+
+[[git.list]]
+alias = "paru"
+repo_url = "https://aur.archlinux.org/paru.git"
+clone_dir = "/home/shrey/paru"
+
+[git.paru]
+add_cmds = [ "(cd /home/shrey/paru/ && makepkg -si)" ]
+del_cmds = [ "sudo pacman -R paru" ]
