@@ -1,12 +1,13 @@
-[copper] 
+[copper]
 generation_store_dir = "/home/shrey/.copper"
-max_generations = 3                          
+max_generations = 3
 
 [system_packages]
 add_cmd = "paru -S --noconfirm --needed #1"
 del_cmd = "paru -R --noconfirm #1"
 list = [
     "pkg-config",
+    "spectacle",
     "bear",
     "bash-language-server",
     "bluez",
@@ -20,7 +21,7 @@ list = [
     "github-cli",
     "kcalc",
     "htop",
-    "kitty",
+    "wezterm",
     "less",
     "llvm",
     "man",
@@ -40,18 +41,18 @@ list = [
     "zoxide",
     "acpi_call-dkms",
     "linux-zen-headers",
+    "kvantum",
 ]
+[system_packages.visual-studio-code-bin]
+add_cmds = ["sudo chown $(whoami) -R /opt/visual-studio-code/"]
 
-[systemd_services]
+[services]
 add_cmd = "sudo systemctl enable --now #1"
 del_cmd = "sudo systemctl disable --now #1"
 list = ["bluetooth.service"]
 
-[symlinks] 
-exclude = [
-  "config\\.toml",
-  "\\.git.*"
-]
+[symlinks]
+exclude = ["config\\.toml", "\\.git.*"]
 
 [git]
 add_cmd = "git clone #1 #2"
@@ -63,5 +64,5 @@ repo_url = "https://aur.archlinux.org/paru.git"
 clone_dir = "/home/shrey/paru"
 
 [git.paru]
-add_cmds = [ "(cd /home/shrey/paru/ && makepkg -si)" ]
-del_cmds = [ "sudo pacman -R paru" ]
+add_cmds = ["(cd /home/shrey/paru/ && makepkg -si)"]
+del_cmds = ["sudo pacman -R paru"]

@@ -34,3 +34,7 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 PS1='[\u@\h \W]\$ '
+
+# cargo
+PATH=~/.cargo/bin/:$PATH
+PATH=~/scripts/:$PATH

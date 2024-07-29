@@ -27,4 +27,4 @@ require("lazy").setup("plugins", {
 })
 
 vim.o.background = "dark"
-vim.cmd([[colorscheme catppuccin-mocha]])
+vim.cmd([[colorscheme gruvbox]])
