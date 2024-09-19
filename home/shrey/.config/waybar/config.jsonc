@@ -3,9 +3,9 @@
     "spacing": 20,
     "height": 0,
     "margin-top": 10,
-    "margin-right": 30,
+    "margin-right": 18,
     "margin-bottom": 0,
-    "margin-left": 30,
+    "margin-left": 18,
     "modules-left": [
         "custom/appmenuicon",
         "clock",
