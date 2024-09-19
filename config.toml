@@ -3,14 +3,14 @@ generation_store_dir = "/home/shrey/.copper"
 max_generations = 3                          # set to 0 for keeping all generations
 
 [system_packages]
-add_cmd = "paru -S --noconfirm --needed #1"
-del_cmd = "paru -R --noconfirm #1"
+add_cmd = "yay -S --noconfirm --needed #1"
+del_cmd = "yay -R --noconfirm #1"
 list = [
-    "aylurs-gtk-shell",
-    "bun",
-    "pkg-config",
     "bear",
+    "apple-fonts",
     "bfg",
+    "zen-browser-bin",
+    "brightnessctl",
     "bash-language-server",
     "bat",
     "blueman",
@@ -32,6 +32,8 @@ list = [
     "less",
     "llvm",
     "man",
+    "waybar",
+    "wofi",
     "nautilus",
     "neovim",
     "nitch-git",
@@ -60,8 +62,10 @@ list = [
     "pavucontrol",
     "eog",
 ]
+[system_packages.visual-studio-code-bin]
+add_cmds = ["sudo chown -R $(whoami) /opt/visual-studio-code/"]
 
-[systemd_services]
+[services]
 add_cmd = "sudo systemctl enable --now #1"
 del_cmd = "sudo systemctl disable --now #1"
 list = ["bluetooth.service", "powertop.service"]
@@ -69,6 +73,34 @@ list = ["bluetooth.service", "powertop.service"]
 [symlinks] # in case need to track files not owned by user, define alternative sudo commands
 sudo_add_cmd = "sudo mkdir -p $(dirname #2) && sudo ln -s #1 #2"
 sudo_del_cmd = "sudo rm -rf #1"
+exclude = ["config\\.toml", "\\.git.*"]
 
 [git]
-add_cmd = "git clone #1 #2"
+add_cmd = "rm -rf #2 && git clone #1 #2"
+del_cmd = "rm -rf #1"
+
+[[git.list]]
+alias = "yay"
+repo_url = "https://aur.archlinux.org/yay"
+clone_dir = "/home/shrey/yay"
+[[git.list]]
+alias = "fun"
+repo_url = "https://github.com/ferriccc/FUN"
+clone_dir = "/home/shrey/FUN"
+[[git.list]]
+alias = "colloid-theme"
+repo_url = "https://github.com/vinceliuice/Colloid-gtk-theme"
+clone_dir = "/home/shrey/.extras/Colloid-gtk-theme"
+[[git.list]]
+alias = "colloid-icon-theme"
+repo_url = "https://github.com/vinceliuice/Colloid-icon-theme"
+clone_dir = "/home/shrey/.extras/Colloid-icon-theme"
+
+[git.yay]
+add_cmds = ["(cd /home/shrey/yay && makepkg -si)"]
+del_cmds = ["sudo pacman -R yay"]
+[git.colloid-theme]
+add_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh)"]
+del_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh -u)"]
+[git.colloid-icon-theme]
+add_cmds = ["(cd /home/shrey/.extras/Colloid-icon-theme && ./install.sh)"]

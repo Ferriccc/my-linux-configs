@@ -1,0 +1,104 @@
+{
+    "layer": "top",
+    "spacing": 20,
+    "height": 0,
+    "margin-top": 10,
+    "margin-right": 30,
+    "margin-bottom": 0,
+    "margin-left": 30,
+    "modules-left": [
+        "custom/appmenuicon",
+        "clock",
+        "custom/media"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "tray",
+        "network",
+        "battery",
+        "backlight",
+        "pulseaudio",
+        "custom/power"
+    ],
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "clock": {
+        "format": "{:%I:%M %p - %a, %d %b %Y}",
+        "tooltip": false
+    },
+    "network": {
+        "format-wifi": "󰤢 {bandwidthDownBits}",
+        "format-ethernet": "󰤢 {bandwidthDownBits}",
+        "format-disconnected": "󰤠 No Network",
+        "interval": 5,
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "nospacing": 1,
+        "format-muted": " ",
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "interval": 5,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip": true
+    },
+    "tray": {
+        "icon_size": 20,
+        "show-passive-items": true,
+        "spacing": 10
+    },
+    "custom/appmenuicon": {
+        "format": "",
+        "on-click": "wofi --show=drun",
+        "tooltip-format": ""
+    },
+    "custom/media": {
+        "format": "󰎈 {}",
+        "return-type": "json",
+        "max-length": 40,
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+        "on-click": "playerctl play-pause"
+    },
+    "custom/power": {
+        "format": "",
+        "on-click": "$HOME/.config/waybar/power_menu.sh 2> /dev/null",
+        "tooltip": false
+    }
+}

@@ -1,0 +1,28 @@
+# Wofi configuration
+
+mode = drun
+allow_images = true
+image_size = 30
+prompt = "search, drun"
+columns = 1
+width = 420
+lines = 4
+no_actions = true
+monitor = "DP-1"
+location = top
+yoffset = 30
+colors = "colors"
+filter_rate = 100
+halign = fill
+orientation = vertical
+content_halign = fill
+matching = contains
+insensitive = true
+term = kitty
+parse_search = true
+allow_markup = true
+single_click = false
+line_wrap = char
+key_down = Tab
+key_expand = Right
+key_forward = Down

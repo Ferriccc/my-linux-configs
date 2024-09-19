@@ -33,7 +33,7 @@ keymap.set("n", "<C-s>", ":w<cr> <bar> :lua vim.lsp.buf.format{ async = true }<c
 
 -- Oil.nvim
 keymap.set("n", "<leader>e", function()
-	require("oil").toggle_float()
+    require("oil").toggle_float()
 end, opts)
 
 -- Telescope
