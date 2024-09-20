@@ -1,0 +1,56 @@
+[copper] # let copper manage it's own config!
+generation_store_dir = "/home/shrey/.copper"
+max_generations = 3                          # set to 0 for keeping all generations
+
+[system_packages]
+add_cmd = "yay -S --noconfirm --needed #1"
+del_cmd = "yay -R --noconfirm #1"
+list = [
+    "bear",
+    "bfg",
+    "bash-language-server",
+    "bat",
+    "clang",
+    "curl",
+    "exa",
+    "starship",
+    "fzf",
+    "github-cli",
+    "less",
+    "llvm",
+    "man",
+    "neovim",
+    "nitch-git",
+    "npm",
+    "python-pynvim",
+    "ripgrep",
+    "tldr",
+    "trash-cli",
+    "ttf-jetbrains-mono-nerd",
+    "unzip",
+    "wget",
+    "wl-clipboard",
+    "zoxide",
+]
+
+[symlinks] # in case need to track files not owned by user, define alternative sudo commands
+sudo_add_cmd = "sudo mkdir -p $(dirname #2) && sudo ln -s #1 #2"
+sudo_del_cmd = "sudo rm -rf #1"
+exclude = ["config\\.toml", "\\.git.*"]
+
+[git]
+add_cmd = "rm -rf #2 && git clone #1 #2"
+del_cmd = "rm -rf #1"
+
+[[git.list]]
+alias = "yay"
+repo_url = "https://aur.archlinux.org/yay"
+clone_dir = "/home/shrey/yay"
+[[git.list]]
+alias = "fun"
+repo_url = "https://github.com/ferriccc/FUN"
+clone_dir = "/home/shrey/FUN"
+
+[git.yay]
+add_cmds = ["(cd /home/shrey/yay && makepkg -si)"]
+del_cmds = ["sudo pacman -R yay"]

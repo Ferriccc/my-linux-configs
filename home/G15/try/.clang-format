@@ -1,8 +1,0 @@
-BasedOnStyle: LLVM
-Standard: Cpp11
-IndentWidth: 2
-TabWidth: 2
-UseTab: Never
-# ForEachMacros:
-# - fun
-# - recfun
