@@ -44,4 +44,5 @@ keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <cr>", opts)
 keymap.set("n", "<leader>fh", "<cmd> Telescope help_tags  <cr>", opts)
 
 -- Compile and Run
-keymap.set("n", "<F9>", ":w <bar> :!g++ -DLOCALRUN % && ./a.out < in.txt && trash ./a.out<cr>", opts)
+keymap.set("n", "<F9>", ":w <bar> :!./compiler.sh % && ./a.out < in.txt<cr>", opts)
+keymap.set("n", "<F10>", ":w <bar> :!./compiler.sh %<cr>", opts)
