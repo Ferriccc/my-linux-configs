@@ -31,6 +31,7 @@ list = [
     "unzip",
     "wget",
     "wl-clipboard",
+    "tmux",
     "zoxide",
 ]
 
@@ -51,6 +52,10 @@ clone_dir = "/home/shrey/yay"
 alias = "fun"
 repo_url = "https://github.com/ferriccc/FUN"
 clone_dir = "/home/shrey/FUN"
+[[git.list]]
+alias = "tpm"
+repo_url = "https://github.com/tmux-plugins/tpm"
+clone_dir = "/home/shrey/.tmux/plugins/tpm"
 
 [git.yay]
 add_cmds = ["(cd /home/shrey/yay && makepkg -si)"]

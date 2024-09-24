@@ -10,10 +10,11 @@ keymap.set("i", "jj", "<Esc>")
 
 -- Window
 keymap.set("n", "<C-\\>", ":vsplit <cr>", opts)
-keymap.set("n", "<C-h>", "<C-w>h", opts)
-keymap.set("n", "<C-j>", "<C-w>j", opts)
-keymap.set("n", "<C-k>", "<C-w>k", opts)
-keymap.set("n", "<C-l>", "<C-w>l", opts)
+-- These are overriden by tmux-vim plugin
+-- keymap.set("n", "<C-h>", "<C-w>h", opts)
+-- keymap.set("n", "<C-j>", "<C-w>j", opts)
+-- keymap.set("n", "<C-k>", "<C-w>k", opts)
+-- keymap.set("n", "<C-l>", "<C-w>l", opts)
 keymap.set("n", "<C-Up>", ":resize -2 <cr>", opts)
 keymap.set("n", "<C-Down>", ":resize +2 <cr>", opts)
 keymap.set("n", "<C-Left>", ":vertical resize -2 <cr>", opts)
