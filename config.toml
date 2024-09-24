@@ -11,6 +11,7 @@ list = [
     "bash-language-server",
     "bat",
     "clang",
+    "p7zip",
     "curl",
     "exa",
     "starship",
