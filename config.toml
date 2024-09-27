@@ -10,6 +10,8 @@ list = [
     "bear",
     "bfg",
     "bash-language-server",
+    "python-pip",
+    "python-pipx",
     "bat",
     "clang",
     "p7zip",

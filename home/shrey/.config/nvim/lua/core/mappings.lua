@@ -45,4 +45,4 @@ keymap.set("n", "<leader>fh", "<cmd> Telescope help_tags  <cr>", opts)
 
 -- Compile and Run
 keymap.set("n", "<F9>", ":w <bar> :!./compiler.sh % && ./a.out < in.txt<cr>", opts)
-keymap.set("n", "<F10>", ":w <bar> :!./compiler.sh %<cr>", opts)
+keymap.set("n", "<M-b>", ":w <bar> :!./compiler.sh %<cr>", opts)
