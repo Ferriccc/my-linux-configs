@@ -6,69 +6,72 @@ max_generations = 3                          # set to 0 for keeping all generati
 add_cmd = "yay -S --noconfirm --needed #1"
 del_cmd = "yay -R --noconfirm #1"
 list = [
-    "bear",
-    "apple-fonts",
-    "bfg",
-    "zen-browser-bin",
+    # Hyprland
     "brightnessctl",
-    "bash-language-server",
-    "bat",
     "blueman",
     "bluez",
     "bluez-utils",
-    "clang",
-    "curl",
     "google-chrome",
-    "exa",
-    "starship",
-    "fzf",
-    "github-cli",
     "gnome-calculator",
-    "htop",
     "hyprland",
     "hyprpicker",
     "hyprshot",
     "kitty",
-    "less",
-    "llvm",
-    "man",
     "waybar",
     "wofi",
     "nautilus",
-    "neovim",
-    "nitch-git",
     "noto-fonts",
-    "npm",
+    "noto-fonts-emoji",
     "dconf-editor",
     "powertop",
-    "python-pynvim",
-    "ripgrep",
     "spotify-adblock",
     "swww",
-    "tldr",
-    "trash-cli",
-    "ttf-jetbrains-mono-nerd",
-    "unzip",
-    "visual-studio-code-bin",
-    "wget",
-    "wl-clipboard",
     "xdg-desktop-portal-gtk",
     "xdg-desktop-portal-hyprland",
     "xdg-desktop-portal",
-    "zoxide",
     "cliphist",
     "acpi_call-dkms",
     "linux-zen-headers",
     "pavucontrol",
-    "eog",
+    "otf-geist-mono-nerd",
+
+    # WSL
+    "acpi",
+    "bear",
+    "bfg",
+    "bash-language-server",
+    "python-pip",
+    "python-pipx",
+    "bat",
+    "clang",
+    "p7zip",
+    "curl",
+    "exa",
+    "starship",
+    "fzf",
+    "github-cli",
+    "less",
+    "llvm",
+    "man",
+    "neovim",
+    "nitch-git",
+    "npm",
+    "python-pynvim",
+    "ripgrep",
+    "tldr",
+    "trash-cli",
+    "ttf-jetbrains-mono-nerd",
+    "unzip",
+    "wget",
+    "wl-clipboard",
+    "tmux",
+    "zoxide",
 ]
-[system_packages.visual-studio-code-bin]
-add_cmds = ["sudo chown -R $(whoami) /opt/visual-studio-code/"]
 
 [services]
 add_cmd = "sudo systemctl enable --now #1"
 del_cmd = "sudo systemctl disable --now #1"
-list = ["bluetooth.service", "powertop.service"]
+list = ["bluetooth.service"]
 
 [symlinks] # in case need to track files not owned by user, define alternative sudo commands
 sudo_add_cmd = "sudo mkdir -p $(dirname #2) && sudo ln -s #1 #2"
@@ -88,6 +91,10 @@ alias = "fun"
 repo_url = "https://github.com/ferriccc/FUN"
 clone_dir = "/home/shrey/FUN"
 [[git.list]]
+alias = "tpm"
+repo_url = "https://github.com/tmux-plugins/tpm"
+clone_dir = "/home/shrey/.tmux/plugins/tpm"
+[[git.list]]
 alias = "colloid-theme"
 repo_url = "https://github.com/vinceliuice/Colloid-gtk-theme"
 clone_dir = "/home/shrey/.extras/Colloid-gtk-theme"
@@ -95,6 +102,7 @@ clone_dir = "/home/shrey/.extras/Colloid-gtk-theme"
 alias = "colloid-icon-theme"
 repo_url = "https://github.com/vinceliuice/Colloid-icon-theme"
 clone_dir = "/home/shrey/.extras/Colloid-icon-theme"
+
 
 [git.yay]
 add_cmds = ["(cd /home/shrey/yay && makepkg -si)"]

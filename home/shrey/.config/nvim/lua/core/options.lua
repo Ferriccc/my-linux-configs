@@ -5,9 +5,6 @@ local opt = vim.opt
 -- global statusline
 opt.laststatus = 3
 
--- fat cursor
--- opt.guicursor = ""
-
 -- disable cmd messages
 opt.showmode = false
 

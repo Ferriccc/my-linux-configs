@@ -20,6 +20,8 @@ function chk() {
     qt check -c ./check.cpp -g ./gen.cpp -t "$target" --break_bad --save-bad
 }
 
+export EDITOR='nvim'
+
 # aliases
 alias cat="bat"
 alias ls="exa -l --git --color=always --icons --sort=extension --no-user --no-permissions"
@@ -35,3 +37,6 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 PS1='[\u@\h \W]\$ '
+
+# Created by `pipx` on 2024-09-27 16:17:08
+export PATH="$PATH:/home/shrey/.local/bin"
