@@ -22,7 +22,15 @@ window#waybar {
     margin-left: 15px;
 }
 
-#custom-power {
+#custom-suspend {
+    margin-right: 20px;
+}
+
+#custom-shutdown {
+    margin-right: 20px;
+}
+
+#custom-reboot {
     margin-right: 20px;
 }
 

@@ -18,9 +18,10 @@
         "tray",
         "network",
         "battery",
+        "bluetooth",
         "backlight",
         "pulseaudio",
-        "custom/power"
+        "group/power"
     ],
     "backlight": {
         "format": "{icon} {percent}%",
@@ -41,10 +42,10 @@
         "tooltip": false
     },
     "network": {
-        "format-wifi": "󰤢 {bandwidthDownBits}",
-        "format-ethernet": "󰤢 {bandwidthDownBits}",
+        "format-wifi": "󰤢 {essid}",
+        "format-ethernet": "󰤢 {essid}",
         "format-disconnected": "󰤠 No Network",
-        "interval": 5,
+        "interval": 60,
         "tooltip": false
     },
     "pulseaudio": {
@@ -62,9 +63,17 @@
         "on-click": "pavucontrol",
         "tooltip": false
     },
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "",
+        "format-connected-battery": "󰂱 {device_battery_percentage}%",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
     "battery": {
         "format": "{icon}  {capacity}%",
-        "interval": 5,
+        "interval": 60,
         "states": {
             "warning": 20,
             "critical": 10
@@ -86,7 +95,7 @@
     "custom/appmenuicon": {
         "format": "",
         "on-click": "wofi --show=drun",
-        "tooltip-format": ""
+        "tooltip-format": "I use arch btw!"
     },
     "custom/media": {
         "format": "󰎈 {}",
@@ -96,9 +105,31 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
         "on-click": "playerctl play-pause"
     },
-    "custom/power": {
-        "format": "",
-        "on-click": "$HOME/.config/waybar/power_menu.sh 2> /dev/null",
+    "custom/suspend": {
+       "format": "󰒲",
+        "on-click": "systemctl suspend",
         "tooltip": false
+    },
+    "custom/shutdown": {
+        "format": "",
+        "on-click": "systemctl poweroff",
+        "tooltip": false
+    },
+    "custom/reboot": {
+        "format": "",
+        "on-click": "systemctl reboot",
+        "tooltip": false
+    },
+    "group/power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/shutdown",
+            "custom/suspend",
+            "custom/reboot"
+        ]
     }
 }
