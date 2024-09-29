@@ -1,5 +1,5 @@
 [global]
-    font = SF Pro Rounded 10
+    font = monospace
     frame_width = 2
     separator_height = 2
     padding = 8
@@ -11,12 +11,12 @@
     origin = "top-center"  # Position notifications at the top-right corner
     offset = "20x20"  # Offset from the top-right corner by 10 pixels horizontally and vertically
     width = 350  # Set the width of the notifications to 350 pixels
-    shrink = false
+    shrink = true
     monitor = 0
     follow = mouse
     sort = false
     indicate_hidden = false
-    alignment = left
+    alignment = center
     show_age_threshold = 60
     line_height = 0
     history_length = 20
@@ -27,18 +27,18 @@
 
 [urgency_low]
     timeout = 5
-    background = "#1d2021"
-    foreground = "#d4be98"
-    frame_color = "#d4be98"
+    foreground = "#c0caf5"
+    background = "#1A1B26"
+    frame_color = "#bb9af7"
 
 [urgency_normal]
     timeout = 5
-    background = "#1d2021"
-    foreground = "#d4be98"
-    frame_color = "#a9b665"
+    foreground = "#c0caf5"
+    background = "#1A1B26"
+    frame_color = "#bb9af7"
 
 [urgency_critical]
     timeout = 5
-    background = "#1d2021"
-    foreground = "#d4be98"
-    frame_color = "#e78a4e"
+    foreground = "#c0caf5"
+    background = "#1A1B26"
+    frame_color = "#bb9af7"
