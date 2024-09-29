@@ -1,6 +1,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+$HOME/scripts/info.sh
+
 # Initialize Starship prompt
 eval "$(starship init bash)"
 
@@ -37,6 +39,8 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 PS1='[\u@\h \W]\$ '
+
+export PATH="$PATH:/home/shrey/scripts/"
 
 # Created by `pipx` on 2024-09-27 16:17:08
 export PATH="$PATH:/home/shrey/.local/bin"
