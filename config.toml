@@ -8,6 +8,7 @@ del_cmd = "yay -R --noconfirm #1"
 list = [
     # Hyprland
     "dunst",
+    "kanata",
     "btop",
     "brightnessctl",
     "bluez",
