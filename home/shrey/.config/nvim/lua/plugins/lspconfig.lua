@@ -116,6 +116,9 @@ return {
         -- configure toml server
         lspconfig["taplo"].setup({})
 
+        -- configure javascript server
+        lspconfig["eslint"].setup({})
+
         -- configure rust server
         lspconfig["rust_analyzer"].setup({
             on_attach = on_attach,

@@ -7,6 +7,7 @@ add_cmd = "yay -S --noconfirm --needed #1"
 del_cmd = "yay -R --noconfirm #1"
 list = [
     # Hyprland
+    "aylurs-gtk-shell",
     "brightnessctl",
     "blueman",
     "bluez",
