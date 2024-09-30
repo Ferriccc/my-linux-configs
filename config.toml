@@ -105,10 +105,6 @@ clone_dir = "/home/shrey/.extras/Colloid-gtk-theme"
 alias = "colloid-icon-theme"
 repo_url = "https://github.com/vinceliuice/Colloid-icon-theme"
 clone_dir = "/home/shrey/.extras/Colloid-icon-theme"
-[[git.list]]
-alias = "hyprpanel"
-repo_url = "https://github.com/Jas-SinghFSU/HyprPanel.git"
-clone_dir = "/home/shrey/.config/ags/"
 
 
 [git.yay]
