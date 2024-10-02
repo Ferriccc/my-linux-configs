@@ -40,10 +40,9 @@ bind '"\e[B": history-search-forward'
 
 PS1='[\u@\h \W]\$ '
 
-export PATH="$PATH:/home/shrey/scripts/"
-
-# Created by `pipx` on 2024-09-27 16:17:08
+export PATH="$PATH:/home/shrey/"
 export PATH="$PATH:/home/shrey/.local/bin"
+export PATH="$PATH:/home/shrey/.cargo/bin"
 
 # Variables for bluetooth devices
 export Airdopes="41:42:C9:BD:BA:13"

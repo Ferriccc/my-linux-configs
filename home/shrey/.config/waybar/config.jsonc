@@ -9,14 +9,14 @@
     "modules-left": [
         "custom/appmenuicon",
         "clock",
-        "custom/media"
+        "custom/lizzy"
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
         "tray",
-        "network",
+        // "network",
         "battery",
         "bluetooth",
         "backlight",
@@ -41,13 +41,13 @@
         "format": "{:%I:%M %p - %a, %d %b %Y}",
         "tooltip": false
     },
-    "network": {
-        "format-wifi": "󰤢 {essid}",
-        "format-ethernet": "󰤢 {essid}",
-        "format-disconnected": "󰤠 No Network",
-        "interval": 60,
-        "tooltip": false
-    },
+    //    "network": {
+    //        "format-wifi": "󰤢 {essid}",
+    //        "format-ethernet": "󰤢 {essid}",
+    //        "format-disconnected": "󰤠 No Network",
+    //        "interval": 60,
+    //        "tooltip": false
+    //    },
     "pulseaudio": {
         "scroll-step": 5,
         "max-volume": 150,
@@ -73,7 +73,7 @@
     },
     "battery": {
         "format": "{icon}  {capacity}%",
-        "interval": 60,
+        "interval": 180,
         "states": {
             "warning": 20,
             "critical": 10
@@ -95,18 +95,21 @@
     "custom/appmenuicon": {
         "format": "",
         "on-click": "wofi --show=drun",
-        "tooltip-format": "I use arch btw!"
+        "tooltip": false
     },
-    "custom/media": {
-        "format": "󰎈 {}",
+    "custom/lizzy": {
+        "format": "{icon} {0}",
+        "exec": "lizzy",
         "return-type": "json",
-        "max-length": 40,
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
-        "on-click": "playerctl play-pause"
+        "on-click": "playerctl play-pause",
+        "format-icons": {
+            "Playing": "󰐊",
+            "Paused": "󰏤"
+        },
+        "max-length": 45
     },
     "custom/suspend": {
-       "format": "󰒲",
+        "format": "󰒲",
         "on-click": "systemctl suspend",
         "tooltip": false
     },

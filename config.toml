@@ -9,6 +9,8 @@ list = [
     # Hyprland
     "dunst",
     "kanata",
+    "envycontrol",
+    "wlr-randr",
     "btop",
     "brightnessctl",
     "bluez",
@@ -23,6 +25,7 @@ list = [
     "wofi",
     "nautilus",
     "noto-fonts",
+    "wps-office",
     "noto-fonts-emoji",
     "dconf-editor",
     "powertop",
@@ -37,8 +40,11 @@ list = [
     "pavucontrol",
     "otf-geist-mono-nerd",
     "ticktick",
+    "mpv",
 
     # WSL
+    "cmake",
+    "r",
     "acpi",
     "bear",
     "bfg",
@@ -77,8 +83,6 @@ del_cmd = "sudo systemctl disable --now #1"
 list = ["bluetooth.service"]
 
 [symlinks] # in case need to track files not owned by user, define alternative sudo commands
-sudo_add_cmd = "sudo mkdir -p $(dirname #2) && sudo ln -s #1 #2"
-sudo_del_cmd = "sudo rm -rf #1"
 exclude = ["config\\.toml", "\\.git.*"]
 
 [git]
@@ -105,6 +109,14 @@ clone_dir = "/home/shrey/.extras/Colloid-gtk-theme"
 alias = "colloid-icon-theme"
 repo_url = "https://github.com/vinceliuice/Colloid-icon-theme"
 clone_dir = "/home/shrey/.extras/Colloid-icon-theme"
+[[git.list]]
+alias = "gtest"
+repo_url = "https://github.com/google/googletest/"
+clone_dir = "/home/shrey/gtest"
+[[git.list]]
+alias = "autocpu"
+repo_url = "https://github.com/AdnanHodzic/auto-cpufreq"
+clone_dir = "/home/shrey/.extras/autocpu"
 
 
 [git.yay]
@@ -115,3 +127,5 @@ add_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh)"]
 del_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh -u)"]
 [git.colloid-icon-theme]
 add_cmds = ["(cd /home/shrey/.extras/Colloid-icon-theme && ./install.sh)"]
+[git.autocpu]
+add_cmds = ["(cd /home/shrey/.extras/autocpu && sudo ./auto-cpufreq-installer && sudo auto-cpufreq --install)"]
