@@ -19,6 +19,7 @@ keymap.set("n", "<C-Up>", ":resize -2 <cr>", opts)
 keymap.set("n", "<C-Down>", ":resize +2 <cr>", opts)
 keymap.set("n", "<C-Left>", ":vertical resize -2 <cr>", opts)
 keymap.set("n", "<C-Right>", ":vertical resize +2 <cr>", opts)
+keymap.set("n", "<C-q>", ":q!<cr>", opts)
 
 -- Tabs
 keymap.set("n", "<C-n>", ":tabnew<cr>", opts)
@@ -34,7 +35,7 @@ keymap.set("n", "<C-s>", ":w<cr> <bar> :lua vim.lsp.buf.format{ async = true }<c
 
 -- Oil.nvim
 keymap.set("n", "<leader>e", function()
-	require("oil").toggle_float()
+    require("oil").toggle_float()
 end, opts)
 
 -- Telescope

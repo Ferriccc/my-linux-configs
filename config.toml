@@ -43,6 +43,7 @@ list = [
     "mpv",
 
     # WSL
+    "bc",
     "cmake",
     "r",
     "acpi",

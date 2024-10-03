@@ -33,6 +33,16 @@ return {
 		end,
 	},
 	{
+		"sainnhe/gruvbox-material",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.gruvbox_material_enable_italic = true
+			vim.g.gruvbox_material_background = "dark" -- You can choose 'soft', 'medium', or 'hard'
+			vim.g.gruvbox_material_enable_bold = 1
+		end,
+	},
+	{
 		"neanias/everforest-nvim",
 		name = "everforest",
 		version = false,

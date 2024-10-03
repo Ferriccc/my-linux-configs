@@ -17,7 +17,7 @@
     "modules-right": [
         "tray",
         // "network",
-        "battery",
+        "custom/battery",
         "bluetooth",
         "backlight",
         "pulseaudio",
@@ -67,26 +67,30 @@
         "format": " {status}",
         "format-disabled": "",
         "format-connected-battery": "󰂱 {device_battery_percentage}%",
-        "tooltip-format": "{controller_alias}\t{controller_address}",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+        "tooltip": false,
+        "on-click": "/home/shrey/.config/waybar/bluetoothToggler.sh"
     },
-    "battery": {
-        "format": "{icon}  {capacity}%",
-        "interval": 180,
-        "states": {
-            "warning": 20,
-            "critical": 10
-        },
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
-        "tooltip": true
+    "custom/battery": {
+        "format": "{0}",
+        "exec": "/home/shrey/.config/waybar/powerEstimate.sh",
+        "interval": 300
     },
+    //"battery": {
+    //"format": "{icon}  {capacity}%",
+    //"interval": 180,
+    //"states": {
+    //"warning": 20,
+    //"critical": 10
+    //},
+    //"format-icons": [
+    //"",
+    //"",
+    //"",
+    //"",
+    //""
+    //],
+    //"tooltip": true
+    //},
     "tray": {
         "icon_size": 20,
         "show-passive-items": true,

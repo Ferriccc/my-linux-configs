@@ -2,8 +2,10 @@
 
 (defsrc
   caps
+  lctl
 )
 
 (deflayer base
-  (tap-hold 100 100 esc lctl)
+  lctl
+  XX
 )

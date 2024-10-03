@@ -1,7 +1,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-$HOME/scripts/info.sh
+# $HOME/scripts/info.sh
+
+# Set stack size to unlimited
+ulimit -s unlimited
 
 # Initialize Starship prompt
 eval "$(starship init bash)"
@@ -40,9 +43,6 @@ bind '"\e[B": history-search-forward'
 
 PS1='[\u@\h \W]\$ '
 
-export PATH="$PATH:/home/shrey/"
+export PATH="$PATH:/home/shrey/scripts"
 export PATH="$PATH:/home/shrey/.local/bin"
 export PATH="$PATH:/home/shrey/.cargo/bin"
-
-# Variables for bluetooth devices
-export Airdopes="41:42:C9:BD:BA:13"
