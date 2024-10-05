@@ -44,5 +44,6 @@ bind '"\e[B": history-search-forward'
 PS1='[\u@\h \W]\$ '
 
 export PATH="$PATH:/home/shrey/scripts"
+export PATH="$PATH:/home/shrey/qt"
 export PATH="$PATH:/home/shrey/.local/bin"
 export PATH="$PATH:/home/shrey/.cargo/bin"

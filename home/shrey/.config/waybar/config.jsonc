@@ -23,6 +23,13 @@
         "pulseaudio",
         "group/power"
     ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "active": ""
+        }
+    },
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": [

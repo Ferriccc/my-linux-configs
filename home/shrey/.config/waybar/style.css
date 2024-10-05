@@ -41,10 +41,10 @@ window#waybar {
     padding: 4px 8px;
 }
 
-#workspaces button.active {
-    border-bottom: 4px solid @accentHex;
-    color: @accentHex;
-}
+/* #workspaces button.active { */
+/*     border-bottom: 4px solid @accentHex; */
+/*     color: @accentHex; */
+/* } */
 
 #workspaces button.urgent {
     background-color: #e78a4e;
