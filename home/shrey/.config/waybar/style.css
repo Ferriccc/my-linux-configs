@@ -4,7 +4,7 @@
     border: none;
     border-radius: 0;
     min-height: 30px;
-    font-family: 'JetBrainsMono Nerd Font';
+    font-family: 'monospace';
     font-weight: bold;
     font-size: 14px;
     padding: 0;
@@ -19,26 +19,17 @@ window#waybar {
 
 #custom-appmenuicon {
     color: @accentHex;
-    margin-left: 15px;
 }
 
 #custom-suspend {
     margin-right: 20px;
-}
-
-#custom-shutdown {
-    margin-right: 20px;
-}
-
-#custom-reboot {
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 #workspaces button {
     all: initial;
     min-width: 0;
-    box-shadow: inset 0 -3px transparent;
-    padding: 4px 8px;
+    padding: 4px 4px;
 }
 
 /* #workspaces button.active { */

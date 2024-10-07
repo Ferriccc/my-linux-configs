@@ -7,22 +7,26 @@
     "margin-bottom": 0,
     "margin-left": 18,
     "modules-left": [
-        "custom/appmenuicon",
-        "clock",
+        "custom/ends",
+        "hyprland/workspaces",
         "custom/lizzy"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "clock"
     ],
     "modules-right": [
         "tray",
-        // "network",
-        "custom/battery",
+        "upower",
         "bluetooth",
         "backlight",
         "pulseaudio",
-        "group/power"
+        "group/power",
+        "custom/ends"
     ],
+    "custom/ends": {
+        "format": "&#8203;",
+        "tooltip": "some"
+    },
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
@@ -48,13 +52,6 @@
         "format": "{:%I:%M %p - %a, %d %b %Y}",
         "tooltip": false
     },
-    //    "network": {
-    //        "format-wifi": "󰤢 {essid}",
-    //        "format-ethernet": "󰤢 {essid}",
-    //        "format-disconnected": "󰤠 No Network",
-    //        "interval": 60,
-    //        "tooltip": false
-    //    },
     "pulseaudio": {
         "scroll-step": 5,
         "max-volume": 150,
@@ -70,34 +67,19 @@
         "on-click": "pavucontrol",
         "tooltip": false
     },
+    "upower": {
+        "icon-size": 18,
+        "format": " {percentage} - {time}",
+        "tooltip": false
+    },
     "bluetooth": {
         "format": " {status}",
         "format-disabled": "",
         "format-connected-battery": "󰂱 {device_battery_percentage}%",
         "tooltip": false,
-        "on-click": "/home/shrey/.config/waybar/bluetoothToggler.sh"
-    },
-    "custom/battery": {
-        "format": "{0}",
-        "exec": "/home/shrey/.config/waybar/powerEstimate.sh",
+        "on-click": "/home/shrey/.config/waybar/bluetoothToggler.sh",
         "interval": 300
     },
-    //"battery": {
-    //"format": "{icon}  {capacity}%",
-    //"interval": 180,
-    //"states": {
-    //"warning": 20,
-    //"critical": 10
-    //},
-    //"format-icons": [
-    //"",
-    //"",
-    //"",
-    //"",
-    //""
-    //],
-    //"tooltip": true
-    //},
     "tray": {
         "icon_size": 20,
         "show-passive-items": true,
@@ -146,4 +128,27 @@
             "custom/reboot"
         ]
     }
+    //"battery": {
+    //"format": "{icon}  {capacity}%",
+    //"interval": 180,
+    //"states": {
+    //"warning": 20,
+    //"critical": 10
+    //},
+    //"format-icons": [
+    //"",
+    //"",
+    //"",
+    //"",
+    //""
+    //],
+    //"tooltip": true
+    //},
+    //    "network": {
+    //        "format-wifi": "󰤢 {essid}",
+    //        "format-ethernet": "󰤢 {essid}",
+    //        "format-disconnected": "󰤠 No Network",
+    //        "interval": 60,
+    //        "tooltip": false
+    //    },
 }
