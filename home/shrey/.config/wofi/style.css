@@ -37,6 +37,7 @@ window {
 
 #entry:selected {
     background-color: @accentHex;
+    
 }
 
 #entry:selected #text {

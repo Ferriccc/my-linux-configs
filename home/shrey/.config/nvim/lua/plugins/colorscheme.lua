@@ -1,5 +1,9 @@
--- colorscheme (catppuccin with nvchad flavour).
 return {
+	{
+		"nyoom-engineering/oxocarbon.nvim",
+		lazy = false,
+	},
+
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,

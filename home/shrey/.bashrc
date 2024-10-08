@@ -1,8 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# $HOME/scripts/info.sh
-
 # Set stack size to unlimited
 ulimit -s unlimited
 
@@ -11,6 +9,9 @@ eval "$(starship init bash)"
 
 # Initialize Zoxide
 eval "$(zoxide init bash)"
+
+# Initialize direnv
+eval "$(direnv hook bash)"
 
 # functions
 function rm() {
