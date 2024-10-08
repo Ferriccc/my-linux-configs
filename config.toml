@@ -56,7 +56,6 @@ list = [
     "python-pipx",
     "python-pynvim",
     "ripgrep",
-    "rofi-wayland",
     "spotify-adblock",
     "starship",
     "swww",
@@ -69,7 +68,7 @@ list = [
     "wget",
     "wl-clipboard",
     "wlr-randr",
-    # "wofi",
+    "wofi",
     "xdg-desktop-portal",
     "xdg-desktop-portal-gtk",
     "xdg-desktop-portal-hyprland",
@@ -127,4 +126,6 @@ del_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh -u)"]
 [git.colloid-icon-theme]
 add_cmds = ["(cd /home/shrey/.extras/Colloid-icon-theme && ./install.sh)"]
 [git.autocpu]
-add_cmds = ["(cd /home/shrey/.extras/autocpu && sudo ./auto-cpufreq-installer && sudo auto-cpufreq --install)"]
+add_cmds = [
+    "(cd /home/shrey/.extras/autocpu && sudo ./auto-cpufreq-installer && sudo auto-cpufreq --install)",
+]
