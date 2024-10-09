@@ -32,6 +32,14 @@ return {
         end
 
         cmp.setup({
+            window = {
+                border = "rounded",
+                -- completion = cmp.config.window.bordered(),
+                -- documentation = cmp.config.window.bordered(),
+            },
+            completion = {
+                border = "rounded",
+            },
             snippet = {
                 expand = function(args)
                     luasnip.lsp_expand(args.body)
@@ -64,10 +72,6 @@ return {
             confirm_opts = {
                 behavior = cmp.ConfirmBehavior.Replace,
                 select = false,
-            },
-            window = {
-                completion = cmp.config.window.bordered(),
-                documentation = cmp.config.window.bordered(),
             },
         })
         cmp.setup.cmdline({ "/", "?" }, {
