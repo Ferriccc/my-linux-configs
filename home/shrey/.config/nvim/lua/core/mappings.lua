@@ -35,7 +35,7 @@ keymap.set("n", "<C-s>", ":w<cr> <bar> :lua vim.lsp.buf.format{ async = true }<c
 
 -- Oil.nvim
 keymap.set("n", "<leader>e", function()
-    require("oil").toggle_float()
+	require("oil").toggle_float()
 end, opts)
 
 -- Telescope
@@ -47,3 +47,28 @@ keymap.set("n", "<leader>fh", "<cmd> Telescope help_tags  <cr>", opts)
 -- Compile and Run
 keymap.set("n", "<F9>", ":w <bar> :!./compiler.sh % && ./a.out < in.txt<cr>", opts)
 keymap.set("n", "<M-b>", ":w <bar> :!./compiler.sh %<cr>", opts)
+
+-- Custom (cpp)
+-- Function to wrap the selected lines
+function WrapSelection()
+	local start_pos = vim.fn.getpos("'<")
+	local end_pos = vim.fn.getpos("'>")
+
+	local start_line = start_pos[2]
+	local end_line = end_pos[2]
+
+	-- Insert text at the start of the selection
+	vim.fn.append(start_line - 1, "#ifdef LOCAL")
+
+	-- Insert text at the end of the selection
+	vim.fn.append(end_line + 1, "#endif")
+end
+
+-- Autocommand for C++ file type
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "cpp", -- Only apply to C++ files
+	callback = function()
+		-- Set mapping for visual mode (<leader>l) to wrap the selected lines
+		vim.api.nvim_buf_set_keymap(0, "v", "<leader>l", ":lua WrapSelection()<CR>", { noremap = true, silent = true })
+	end,
+})

@@ -70,6 +70,13 @@ opt.updatetime = 250
 opt.whichwrap:append("<>[]hl")
 opt.iskeyword:append("-")
 
+-- folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.cmd([[
+  autocmd BufRead * setlocal foldlevel=99
+]])
+
 -- disable some default providers
 for _, provider in ipairs({ "node", "perl", "python3", "ruby" }) do
 	vim.g["loaded_" .. provider .. "_provider"] = 0
