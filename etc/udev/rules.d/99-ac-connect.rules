@@ -1,0 +1,5 @@
+# Rule for when AC power is connected
+SUBSYSTEM=="power_supply", ATTR{online}=="1", ACTION=="change", RUN+="/home/shrey/scripts/GmodeON.sh"
+
+# Rule for when AC power is disconnected
+SUBSYSTEM=="power_supply", ATTR{online}=="0", ACTION=="change", RUN+="/home/shrey/scripts/GmodeOFF.sh"
