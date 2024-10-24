@@ -26,7 +26,7 @@ window {
 
 #entry {
     padding: 5px 10px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 #entry #text {
@@ -37,7 +37,7 @@ window {
 
 #entry:selected {
     background-color: @accentHex;
-    
+
 }
 
 #entry:selected #text {

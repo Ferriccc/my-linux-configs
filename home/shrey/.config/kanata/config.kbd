@@ -2,10 +2,8 @@
 
 (defsrc
   caps
-  lctl
 )
 
 (deflayer base
   lctl
-  XX
 )

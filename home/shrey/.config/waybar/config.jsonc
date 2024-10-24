@@ -2,10 +2,10 @@
     "layer": "top",
     "spacing": 20,
     "height": 0,
-    "margin-top": 10,
-    "margin-right": 18,
+    "margin-top": 0,
+    "margin-right": 0,
     "margin-bottom": 0,
-    "margin-left": 18,
+    "margin-left": 0,
     "modules-left": [
         "custom/ends",
         "hyprland/workspaces",
@@ -102,17 +102,17 @@
         "max-length": 45
     },
     "custom/suspend": {
-        "format": "󰒲",
+        "format": "󰒲 ",
         "on-click": "systemctl suspend",
         "tooltip": false
     },
     "custom/shutdown": {
-        "format": "",
+        "format": " ",
         "on-click": "systemctl poweroff",
         "tooltip": false
     },
     "custom/reboot": {
-        "format": "",
+        "format": " ",
         "on-click": "systemctl reboot",
         "tooltip": false
     },
@@ -128,27 +128,4 @@
             "custom/reboot"
         ]
     }
-    //"battery": {
-    //"format": "{icon}  {capacity}%",
-    //"interval": 180,
-    //"states": {
-    //"warning": 20,
-    //"critical": 10
-    //},
-    //"format-icons": [
-    //"",
-    //"",
-    //"",
-    //"",
-    //""
-    //],
-    //"tooltip": true
-    //},
-    //    "network": {
-    //        "format-wifi": "󰤢 {essid}",
-    //        "format-ethernet": "󰤢 {essid}",
-    //        "format-disconnected": "󰤠 No Network",
-    //        "interval": 60,
-    //        "tooltip": false
-    //    },
 }

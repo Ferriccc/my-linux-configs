@@ -37,7 +37,8 @@ list = [
     "kanata",
     "kitty",
     "less",
-    "libreoffice-fresh",
+    "onlyoffice-bin",
+    "visual-studio-code-bin",
     "linux-zen-headers",
     "llvm",
     "man",
@@ -74,6 +75,10 @@ list = [
     "xdg-desktop-portal-hyprland",
     "zoxide",
 ]
+[system_packages.visual-studio-code-bin]
+add_cmds = [
+    "sudo chown -R $(whoami) /opt/visual-studio-code"
+]
 
 [services]
 add_cmd = "sudo systemctl enable --now #1"
@@ -92,14 +97,6 @@ alias = "yay"
 repo_url = "https://aur.archlinux.org/yay"
 clone_dir = "/home/shrey/yay"
 [[git.list]]
-alias = "fun"
-repo_url = "https://github.com/ferriccc/FUN"
-clone_dir = "/home/shrey/FUN"
-[[git.list]]
-alias = "tpm"
-repo_url = "https://github.com/tmux-plugins/tpm"
-clone_dir = "/home/shrey/.tmux/plugins/tpm"
-[[git.list]]
 alias = "colloid-theme"
 repo_url = "https://github.com/vinceliuice/Colloid-gtk-theme"
 clone_dir = "/home/shrey/.extras/Colloid-gtk-theme"
@@ -108,14 +105,13 @@ alias = "colloid-icon-theme"
 repo_url = "https://github.com/vinceliuice/Colloid-icon-theme"
 clone_dir = "/home/shrey/.extras/Colloid-icon-theme"
 [[git.list]]
-alias = "gtest"
-repo_url = "https://github.com/google/googletest/"
-clone_dir = "/home/shrey/gtest"
+alias = "SF-Fonts"
+repo_url = "https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts"
+clone_dir = "/home/shrey/SF"
 [[git.list]]
-alias = "autocpu"
-repo_url = "https://github.com/AdnanHodzic/auto-cpufreq"
-clone_dir = "/home/shrey/.extras/autocpu"
-
+alias = "SF-Mono-Nerd"
+repo_url = "https://github.com/epk/SF-Mono-Nerd-Font"
+clone_dir = "/home/shrey/SF-Mono-Nerd"
 
 [git.yay]
 add_cmds = ["(cd /home/shrey/yay && makepkg -si)"]
@@ -125,7 +121,15 @@ add_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh)"]
 del_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh -u)"]
 [git.colloid-icon-theme]
 add_cmds = ["(cd /home/shrey/.extras/Colloid-icon-theme && ./install.sh)"]
-[git.autocpu]
+[git.SF-Fonts]
 add_cmds = [
-    "(cd /home/shrey/.extras/autocpu && sudo ./auto-cpufreq-installer && sudo auto-cpufreq --install)",
+    "mkdir -p /home/shrey/.local/share/fonts/",
+    "mv /home/shrey/SF/* /home/shrey/.local/share/fonts/",
+    "fc-cache",
+]
+[git.SF-Mono-Nerd]
+add_cmds = [
+    "mkdir -p /home/shrey/.local/share/fonts/",
+    "mv /home/shrey/SF-Mono-Nerd/* /home/shrey/.local/share/fonts/",
+    "fc-cache",
 ]
