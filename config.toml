@@ -6,6 +6,13 @@ max_generations = 3                          # set to 0 for keeping all generati
 add_cmd = "yay -S --noconfirm --needed #1"
 del_cmd = "yay -R --noconfirm #1"
 list = [
+    "adb",
+    "android-tools",
+    "scrcpy",
+    "xz",
+
+    "gthumb",
+    "spotdl",
     "auto-cpufreq",
     "mutter-dynamic-buffering",
     "gnome-browser-connector",
@@ -55,9 +62,7 @@ list = [
     "zoxide",
 ]
 [system_packages.visual-studio-code-bin]
-add_cmds = [
-    "sudo chown -R $(whoami) /opt/visual-studio-code"
-]
+add_cmds = ["sudo chown -R $(whoami) /opt/visual-studio-code"]
 
 [services]
 add_cmd = "sudo systemctl enable --now #1"
@@ -75,14 +80,14 @@ del_cmd = "rm -rf #1"
 alias = "yay"
 repo_url = "https://aur.archlinux.org/yay"
 clone_dir = "/home/shrey/yay"
- #[[git.list]]
- #alias = "colloid-theme"
- #repo_url = "https://github.com/vinceliuice/Colloid-gtk-theme"
- #clone_dir = "/home/shrey/.extras/Colloid-gtk-theme"
- #[[git.list]]
- #alias = "colloid-icon-theme"
- #repo_url = "https://github.com/vinceliuice/Colloid-icon-theme"
- #clone_dir = "/home/shrey/.extras/Colloid-icon-theme"
+[[git.list]]
+alias = "WhiteSur-gtk-theme"
+repo_url = "https://github.com/vinceliuice/WhiteSur-gtk-theme"
+clone_dir = "/home/shrey/.extras/WhiteSur-gtk-theme"
+[[git.list]]
+alias = "colloid-icon-theme"
+repo_url = "https://github.com/vinceliuice/Colloid-icon-theme"
+clone_dir = "/home/shrey/.extras/Colloid-icon-theme"
 [[git.list]]
 alias = "SF-Fonts"
 repo_url = "https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts"
@@ -95,11 +100,11 @@ clone_dir = "/home/shrey/SF-Mono-Nerd"
 [git.yay]
 add_cmds = ["(cd /home/shrey/yay && makepkg -si)"]
 del_cmds = ["sudo pacman -R yay"]
- #[git.colloid-theme]
- #add_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh)"]
- #del_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh -u)"]
- #[git.colloid-icon-theme]
- #add_cmds = ["(cd /home/shrey/.extras/Colloid-icon-theme && ./install.sh)"]
+[git.WhiteSur-gtk-theme]
+add_cmds = ["(cd /home/shrey/.extras/WhiteSur-gtk-theme && ./install.sh -l)"]
+del_cmds = ["(cd /home/shrey/.extras/WhiteSur-gtk-theme && ./install.sh -u)"]
+[git.colloid-icon-theme]
+add_cmds = ["(cd /home/shrey/.extras/Colloid-icon-theme && ./install.sh)"]
 [git.SF-Fonts]
 add_cmds = [
     "mkdir -p /home/shrey/.local/share/fonts/",
