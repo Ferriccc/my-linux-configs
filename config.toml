@@ -24,6 +24,7 @@ list = [
     "exa",
     "fzf",
     "github-cli",
+    "git",
     "gnome-calculator",
     "thorium-browser-bin",
     "kanata",
@@ -72,11 +73,16 @@ list = [
 [system_packages.visual-studio-code-bin]
 add_cmds = [
     "sudo chown -R $(whoami) /opt/visual-studio-code",
-    "sudo desktop-file-install /home/shrey/.local/share/applications/code.desktop"
+    "sudo desktop-file-install /home/shrey/.local/share/applications/code.desktop",
 ]
 [system_packages.spotify-adblock]
 add_cmds = [
-    "sudo desktop-file-install /home/shrey/.local/share/applications/spotify-adblock.desktop"
+    "sudo desktop-file-install /home/shrey/.local/share/applications/spotify-adblock.desktop",
+]
+[system_packages.git]
+add_cmds = [
+    "git config --global user.email shrey.s4@ahduni.edu.in",
+    "git config --global user.name ferriccc",
 ]
 
 [services]
