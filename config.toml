@@ -10,9 +10,6 @@ list = [
     "acpi_call-dkms",
     "bash-language-server",
     "bat",
-    "bc",
-    "bear",
-    "bfg",
     "bluez",
     "bluez-utils",
     "brightnessctl",
@@ -22,18 +19,13 @@ list = [
     "cmake",
     "curl",
     "dconf-editor",
-    "discord",
     "direnv",
     "dunst",
-    "envycontrol",
     "exa",
     "fzf",
     "github-cli",
     "gnome-calculator",
     "thorium-browser-bin",
-    "hyprland",
-    "hyprpicker",
-    "hyprshot",
     "kanata",
     "kitty",
     "less",
@@ -45,45 +37,52 @@ list = [
     "mpv",
     "nautilus",
     "neovim",
-    "nitch-git",
+    "fastfetch",
     "noto-fonts",
     "noto-fonts-emoji",
     "npm",
     "otf-geist-mono-nerd",
-    "p7zip",
-    "pavucontrol",
     "powertop",
-    "python-pip",
-    "python-pipx",
     "python-pynvim",
     "ripgrep",
     "spotify-adblock",
     "starship",
     "swww",
     "tldr",
-    "tmux",
     "trash-cli",
     "ttf-jetbrains-mono-nerd",
     "unzip",
-    "waybar",
+    "grimblast",
+
+    # "waybar",
     "wget",
     "wl-clipboard",
-    "wlr-randr",
     "wofi",
     "xdg-desktop-portal",
     "xdg-desktop-portal-gtk",
-    "xdg-desktop-portal-hyprland",
     "zoxide",
+
+    "libinput",
+    "wayland",
+    "wlroots-git",
+    "lib-xkbcommon",
+    "wayland-protocols",
+    "pkg-config",
 ]
 [system_packages.visual-studio-code-bin]
 add_cmds = [
-    "sudo chown -R $(whoami) /opt/visual-studio-code"
+    "sudo chown -R $(whoami) /opt/visual-studio-code",
+    "sudo desktop-file-install /home/shrey/.local/share/applications/code.desktop"
+]
+[system_packages.spotify-adblock]
+add_cmds = [
+    "sudo desktop-file-install /home/shrey/.local/share/applications/spotify-adblock.desktop"
 ]
 
 [services]
 add_cmd = "sudo systemctl enable --now #1"
 del_cmd = "sudo systemctl disable --now #1"
-list = ["bluetooth.service"]
+list = ["bluetooth.service", "kanata.service"]
 
 [symlinks] # in case need to track files not owned by user, define alternative sudo commands
 exclude = ["config\\.toml", "\\.git.*"]
@@ -96,6 +95,7 @@ del_cmd = "rm -rf #1"
 alias = "yay"
 repo_url = "https://aur.archlinux.org/yay"
 clone_dir = "/home/shrey/yay"
+
 [[git.list]]
 alias = "colloid-theme"
 repo_url = "https://github.com/vinceliuice/Colloid-gtk-theme"
@@ -104,6 +104,7 @@ clone_dir = "/home/shrey/.extras/Colloid-gtk-theme"
 alias = "colloid-icon-theme"
 repo_url = "https://github.com/vinceliuice/Colloid-icon-theme"
 clone_dir = "/home/shrey/.extras/Colloid-icon-theme"
+
 [[git.list]]
 alias = "SF-Fonts"
 repo_url = "https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts"
@@ -116,11 +117,13 @@ clone_dir = "/home/shrey/SF-Mono-Nerd"
 [git.yay]
 add_cmds = ["(cd /home/shrey/yay && makepkg -si)"]
 del_cmds = ["sudo pacman -R yay"]
+
 [git.colloid-theme]
 add_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh)"]
 del_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh -u)"]
 [git.colloid-icon-theme]
 add_cmds = ["(cd /home/shrey/.extras/Colloid-icon-theme && ./install.sh)"]
+
 [git.SF-Fonts]
 add_cmds = [
     "mkdir -p /home/shrey/.local/share/fonts/",

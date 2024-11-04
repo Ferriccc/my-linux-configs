@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Spotify (adblock)
+GenericName=Music Player
+Icon=spotify-client
+TryExec=/usr/bin/spotify
+Exec=env LD_PRELOAD=/usr/lib/spotify-adblock.so /usr/bin/spotify --ozone-platform-hint=wayland --uri=%U
+Terminal=false
+MimeType=x-scheme-handler/spotify;
+Categories=Audio;Music;Player;AudioVideo;
+StartupWMClass=spotify
