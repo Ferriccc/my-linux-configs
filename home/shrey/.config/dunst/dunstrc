@@ -7,7 +7,7 @@
     transparency = 0
     corner_radius = 0
     word_wrap = true
-    ignore_newline = false
+    ignore_newline = true
     origin = "top-right"  # Position notifications at the top-right corner
     offset = "20x20"  # Offset from the top-right corner by 10 pixels horizontally and vertically
     width = 350  # Set the width of the notifications to 350 pixels
