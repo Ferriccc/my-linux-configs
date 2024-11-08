@@ -6,7 +6,6 @@ max_generations = 3                          # set to 0 for keeping all generati
 add_cmd = "yay -S --noconfirm --needed #1"
 del_cmd = "yay -R --noconfirm #1"
 list = [
-    "acpi",
     "bear",
     "bfg",
     "bash-language-server",
@@ -51,10 +50,10 @@ del_cmd = "rm -rf #1"
 alias = "yay"
 repo_url = "https://aur.archlinux.org/yay"
 clone_dir = "/home/shrey/yay"
-[[git.list]]
-alias = "fun"
-repo_url = "https://github.com/ferriccc/FUN"
-clone_dir = "/home/shrey/FUN"
+ #[[git.list]]
+ #alias = "fun"
+ #repo_url = "https://github.com/ferriccc/FUN"
+ #clone_dir = "/home/shrey/FUN"
 [[git.list]]
 alias = "tpm"
 repo_url = "https://github.com/tmux-plugins/tpm"
