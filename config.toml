@@ -6,38 +6,32 @@ max_generations = 3                          # set to 0 for keeping all generati
 add_cmd = "yay -S --noconfirm --needed #1"
 del_cmd = "yay -R --noconfirm #1"
 list = [
+    "sof-firmware",
+    "blueman",
+    "wayvnc",
     "acpi",
     "acpi_call-dkms",
-    "bash-language-server",
     "bat",
-    "bc",
-    "bear",
-    "bfg",
     "bluez",
     "bluez-utils",
     "brightnessctl",
     "btop",
     "clang",
-    "cliphist",
     "cmake",
     "curl",
     "dconf-editor",
-    "discord",
     "direnv",
     "dunst",
-    "envycontrol",
     "exa",
     "fzf",
     "github-cli",
     "gnome-calculator",
-    "thorium-browser-bin",
-    "hyprland",
+    "google-chrome",
     "hyprpicker",
     "hyprshot",
     "kanata",
     "kitty",
     "less",
-    "onlyoffice-bin",
     "visual-studio-code-bin",
     "linux-zen-headers",
     "llvm",
@@ -45,7 +39,6 @@ list = [
     "mpv",
     "nautilus",
     "neovim",
-    "nitch-git",
     "noto-fonts",
     "noto-fonts-emoji",
     "npm",
@@ -61,29 +54,23 @@ list = [
     "starship",
     "swww",
     "tldr",
-    "tmux",
     "trash-cli",
     "ttf-jetbrains-mono-nerd",
     "unzip",
     "waybar",
     "wget",
     "wl-clipboard",
-    "wlr-randr",
     "wofi",
     "xdg-desktop-portal",
     "xdg-desktop-portal-gtk",
     "xdg-desktop-portal-hyprland",
     "zoxide",
 ]
-[system_packages.visual-studio-code-bin]
-add_cmds = [
-    "sudo chown -R $(whoami) /opt/visual-studio-code"
-]
 
 [services]
 add_cmd = "sudo systemctl enable --now #1"
 del_cmd = "sudo systemctl disable --now #1"
-list = ["bluetooth.service"]
+list = ["bluetooth.service", "kanata.service", "powertop.service"]
 
 [symlinks] # in case need to track files not owned by user, define alternative sudo commands
 exclude = ["config\\.toml", "\\.git.*"]

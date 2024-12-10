@@ -14,7 +14,7 @@
 
 window#waybar {
     background: @backgroundHex;
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 #custom-appmenuicon {
