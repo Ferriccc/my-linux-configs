@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Airdopes="41:42:C9:BD:BA:13"
+Airdopes="41:42:11:7D:94:6F"
 
 currentState=$(bluetoothctl info "$Airdopes" | grep Connected | awk '{print $2}')
 

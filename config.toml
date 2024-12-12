@@ -6,6 +6,11 @@ max_generations = 3                          # set to 0 for keeping all generati
 add_cmd = "yay -S --noconfirm --needed #1"
 del_cmd = "yay -R --noconfirm #1"
 list = [
+    "telegram-desktop",
+    "libinput-config-git",
+    "android-tools",
+    "wlr-randr",
+    "libreoffice-fresh",
     "sof-firmware",
     "blueman",
     "wayvnc",
@@ -25,6 +30,7 @@ list = [
     "exa",
     "fzf",
     "github-cli",
+    "git",
     "gnome-calculator",
     "google-chrome",
     "hyprpicker",
@@ -65,6 +71,11 @@ list = [
     "xdg-desktop-portal-gtk",
     "xdg-desktop-portal-hyprland",
     "zoxide",
+]
+[system_packages.git]
+add_cmds = [
+    "git config --global user.name ferriccc",
+    "git config --global user.email shrey.260904@gmail.com"
 ]
 
 [services]

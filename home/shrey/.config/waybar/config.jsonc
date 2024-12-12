@@ -30,8 +30,11 @@
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "default": "",
-            "active": ""
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5"
         }
     },
     "backlight": {
@@ -69,7 +72,7 @@
     },
     "upower": {
         "icon-size": 18,
-        "format": " {percentage} - {time}",
+        "format": " {percentage}",
         "tooltip": false
     },
     "bluetooth": {

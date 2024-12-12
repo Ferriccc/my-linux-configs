@@ -5,10 +5,10 @@
     padding = 8
     horizontal_padding = 10
     transparency = 0
-    corner_radius = 10
+    corner_radius = 7
     word_wrap = true
     ignore_newline = false
-    origin = "top-center"  # Position notifications at the top-right corner
+    origin = "top-right"  # Position notifications at the top-right corner
     offset = "20x20"  # Offset from the top-right corner by 10 pixels horizontally and vertically
     width = 350  # Set the width of the notifications to 350 pixels
     shrink = true
@@ -27,18 +27,18 @@
 
 [urgency_low]
     timeout = 5
-    foreground = "#c0caf5"
-    background = "#1A1B26"
-    frame_color = "#bb9af7"
+    foreground = "#FFFFFF"
+    background = "#1D1D1D"
+    frame_color = "#2679F6"
 
 [urgency_normal]
     timeout = 5
-    foreground = "#c0caf5"
-    background = "#1A1B26"
-    frame_color = "#bb9af7"
+    foreground = "#FFFFFF"
+    background = "#1D1D1D"
+    frame_color = "#2679F6"
 
 [urgency_critical]
     timeout = 5
-    foreground = "#c0caf5"
-    background = "#1A1B26"
-    frame_color = "#bb9af7"
+    foreground = "#FFFFFF"
+    background = "#1D1D1D"
+    frame_color = "#2679F6"

@@ -11,7 +11,7 @@ window {
     font-family: "monospace";
     background-color: @backgroundHex;
     border-radius: 8px;
-    border: 0px solid @accentHex;
+    border: 2px solid @accentHex;
 }
 
 #outer-box {
