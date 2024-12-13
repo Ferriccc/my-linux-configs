@@ -6,6 +6,11 @@ max_generations = 3                          # set to 0 for keeping all generati
 add_cmd = "yay -S --noconfirm --needed #1"
 del_cmd = "yay -R --noconfirm #1"
 list = [
+    "gvfs",
+    "gvfs-mtp",
+    "gvfs-gphoto2",
+    "gvfs-afc",
+    "hyprpolkitagent",
     "telegram-desktop",
     "libinput-config-git",
     "android-tools",
