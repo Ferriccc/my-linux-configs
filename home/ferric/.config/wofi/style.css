@@ -1,4 +1,4 @@
-@import "/home/shrey/.config/colors.css";
+@import "/home/ferric/.config/colors.css";
 
 * {
     border: none;
@@ -47,7 +47,7 @@ window {
 }
 
 #input {
-    background: transparent;
+    background: @backgroundHex;
     margin: 0 5px 0 20px;
     color: @foregroundHex;
     padding: 5px;

@@ -18,6 +18,7 @@
         "tray",
         "upower",
         "bluetooth",
+        "network",
         "backlight",
         "pulseaudio",
         "group/power",
@@ -51,6 +52,18 @@
             ""
         ]
     },
+    "network": {
+        "interface": "wlan0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-ethernet": "{ifname}  ",
+        "format-disconnected": " ",
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+        "tooltip-format-ethernet": "{ifname}  ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
     "clock": {
         "format": "{:%I:%M %p - %a, %d %b %Y}",
         "tooltip": false
@@ -80,7 +93,7 @@
         "format-disabled": "",
         "format-connected-battery": "󰂱 {device_battery_percentage}%",
         "tooltip": false,
-        "on-click": "/home/shrey/.config/waybar/bluetoothToggler.sh",
+        "on-click": "/home/ferric/.config/waybar/bluetoothToggler.sh",
         "interval": 300
     },
     "tray": {
