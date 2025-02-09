@@ -4,6 +4,7 @@
 DUNST_PAUSE_FILE="$HOME/.config/dunst/pause_dunst"
 DUNST_DISMISS_FILE="$HOME/.config/dunst/dismissed_notifications"
 
+
 # Function to toggle DND mode
 toggle_dnd() {
     if [ -f "$DUNST_PAUSE_FILE" ]; then

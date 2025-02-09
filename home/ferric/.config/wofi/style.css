@@ -1,4 +1,6 @@
-@import "/home/ferric/.config/colors.css";
+@define-color foregroundHex #FFFFFF;
+@define-color backgroundHex #1D1D1D;
+@define-color accentHex #FFFFFF;
 
 * {
     border: none;
@@ -8,7 +10,7 @@
 
 window {
     font-size: 16px;
-    font-family: "monospace";
+    font-family: "sans-serif";
     background-color: @backgroundHex;
     border-radius: 8px;
     border: 2px solid @accentHex;

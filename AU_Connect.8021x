@@ -1,0 +1,9 @@
+[Security]
+EAP-Method=PEAP
+EAP-Identity=AU2240094
+EAP-PEAP-Phase2-Method=MSCHAPV2
+EAP-PEAP-Phase2-Identity=AU2240094
+EAP-PEAP-Phase2-Password=Shrey%094
+
+[Settings]
+AutoConnect=true

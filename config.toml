@@ -66,6 +66,7 @@ list = [
     "waybar",
     "wget",
     "wl-clipboard",
+    "cliphist",
     "wofi",
     "xdg-desktop-portal",
     "xdg-desktop-portal-gtk",
@@ -85,7 +86,7 @@ del_cmd = "sudo systemctl disable --now #1"
 list = ["bluetooth.service", "powertop.service"]
 
 [symlinks] # in case need to track files not owned by user, define alternative sudo commands
-exclude = ["config\\.toml", "\\.git.*"]
+exclude = ["config\\.toml", "\\.git.*", "AU_Connect\\.8021x"]
 
 [git]
 add_cmd = "rm -rf #2 && git clone #1 #2"

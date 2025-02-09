@@ -1,17 +1,13 @@
 # Wofi configuration
 
 mode = dmenu
-allow_images = true
-image_size = 30
-prompt = "search"
 columns = 1
-width = 700
-lines = 7
+width = 500
+lines = 8
 no_actions = true
-monitor = "DP-1"
-location = top
-yoffset = 30
-colors = "colors"
 insensitive = true
-parse_search = true
-single_click = true
+hide_scroll = true
+gtk_dark = true
+prompt = Cliphist
+allow_markup = true
+line_wrap = word
