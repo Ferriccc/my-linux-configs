@@ -1,0 +1,171 @@
+{
+    "layer": "top",
+    "spacing": 20,
+    "height": 0,
+    "margin-top": 0, // 5
+    "margin-right": 0, // 10
+    "margin-bottom": 0,
+    "margin-left": 0, //10
+    "modules-left": [
+        "custom/ends",
+        "hyprland/workspaces",
+        "custom/lizzy"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "battery",
+        "bluetooth",
+        "network",
+        "backlight",
+        "pulseaudio",
+        "custom/toggle_notifications",
+        "group/power",
+        "custom/ends"
+    ],
+    "custom/ends": {
+        "format": "&#8203;",
+        "tooltip": "some"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5"
+        }
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "network": {
+        "interface": "wlan0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-ethernet": "{ifname}  ",
+        "format-disconnected": " ",
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+        "tooltip-format-ethernet": "{ifname}  ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+    "clock": {
+        "format": "{:%I:%M %p - %a, %d %b %Y}",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "nospacing": 1,
+        "format-muted": " ",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip": false
+    },
+    "battery": {
+        "bat": "BAT0",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ],
+        "max-length": 25
+    },
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "",
+        "format-connected-battery": "󰂱 {device_battery_percentage}%",
+        "tooltip": false,
+        "on-click": "/home/ferric/.config/waybar/bluetoothToggler.sh",
+        "interval": 300
+    },
+    "tray": {
+        "icon_size": 20,
+        "show-passive-items": true,
+        "spacing": 10
+    },
+    "custom/appmenuicon": {
+        "format": "",
+        "on-click": "wofi --show=drun",
+        "tooltip": false
+    },
+    "custom/lizzy": {
+        "format": "{icon} {0}",
+        "exec": "lizzy",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "format-icons": {
+            "Playing": "󰐊",
+            "Paused": "󰏤"
+        },
+        "max-length": 45
+    },
+    "custom/suspend": {
+        "format": "󰒲 ",
+        "on-click": "systemctl suspend",
+        "tooltip": false
+    },
+    "custom/shutdown": {
+        "format": " ",
+        "on-click": "systemctl poweroff",
+        "tooltip": false
+    },
+    "custom/reboot": {
+        "format": " ",
+        "on-click": "systemctl reboot",
+        "tooltip": false
+    },
+    "group/power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/shutdown",
+            "custom/suspend",
+            "custom/reboot"
+        ]
+    },
+    "custom/toggle_notifications": {
+        "exec": "dunstctl is-paused | grep -q true && echo '{\"text\": \"\", \"tooltip\": \"\", \"class\": \"\", \"percentage\": 100}' || echo '{\"text\": \"\", \"tooltip\": \"\", \"class\": \"\", \"percentage\": 0}'",
+        "return-type": "json",
+        "signal": 10,
+        "format": "{icon}",
+        "format-icons": [
+            "󰂚 ",
+            "󰂛 "
+        ],
+        "on-click": "dunstctl set-paused \"$(dunstctl is-paused | grep -q true && echo false || echo true)\" && pkill -SIGRTMIN+10 waybar"
+    }
+}
