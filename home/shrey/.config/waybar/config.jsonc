@@ -21,6 +21,7 @@
         "network",
         "backlight",
         "pulseaudio",
+        "custom/gmode",
         "custom/toggle_notifications",
         "group/power",
         "custom/ends"
@@ -106,7 +107,7 @@
         "format-disabled": "",
         "format-connected-battery": "󰂱 {device_battery_percentage}%",
         "tooltip": false,
-        "on-click": "/home/ferric/.config/waybar/bluetoothToggler.sh",
+        "on-click": "$HOME/.config/waybar/bluetoothToggler.sh",
         "interval": 300
     },
     "tray": {
@@ -167,5 +168,16 @@
             "󰂛 "
         ],
         "on-click": "dunstctl set-paused \"$(dunstctl is-paused | grep -q true && echo false || echo true)\" && pkill -SIGRTMIN+10 waybar"
+    },
+    "custom/gmode": {
+        "exec": "echo '{\"text\": \"\", \"tooltip\": \"\", \"class\": \"\", \"percentage\": '$(cat /gmode.stat)' }'",
+        "return-type": "json",
+        "signal": 11,
+        "format": "{icon}",
+        "format-icons": [
+            " ",
+            " "
+        ],
+        "on-click": "$HOME/scripts/togglegmode.sh && pkill -SIGRTMIN+11 waybar"
     }
 }

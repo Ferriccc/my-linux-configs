@@ -16,6 +16,7 @@ list = [
     "gnome-calculator",
     "thorium-browser-bin",
     "spotify-adblock",
+    "obsidian",
 
     "hyprpolkitagent",
     "libinput-config-git",
@@ -73,7 +74,7 @@ list = [
 [system_packages.git]
 add_cmds = [
     "git config --global user.name ferriccc",
-    "git config --global user.email shrey.260904@gmail.com"
+    "git config --global user.email shrey.260904@gmail.com",
 ]
 
 [services]
