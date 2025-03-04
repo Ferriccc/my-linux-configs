@@ -30,6 +30,7 @@ list = [
     "brightnessctl",
     "clang",
     "curl",
+    "auto-cpufreq",
     "dconf-editor",
     "dunst",
     "exa",
