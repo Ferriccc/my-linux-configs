@@ -47,8 +47,6 @@ list = [
     "mpv",
     "nautilus",
     "neovim",
-    "noto-fonts",
-    "noto-fonts-emoji",
     "npm",
     "pavucontrol",
     "powertop",
@@ -59,7 +57,6 @@ list = [
     "swww",
     "tldr",
     "trash-cli",
-    "ttf-jetbrains-mono-nerd",
     "unzip",
     "zip",
     "waybar",
@@ -71,11 +68,24 @@ list = [
     "xdg-desktop-portal-gtk",
     "xdg-desktop-portal-hyprland",
     "zoxide",
+
+    "noto-fonts",
+    "noto-fonts-cjk",
+    "noto-fonts-emoji",
+    "noto-fonts-extra",
+    "ttf-ubuntu-font-family",
+    "ttf-jetbrains-mono-nerd",
 ]
 [system_packages.git]
 add_cmds = [
     "git config --global user.name ferriccc",
     "git config --global user.email shrey.260904@gmail.com",
+]
+[system_packages.ttf-jetbrains-mono-nerd]
+add_cmds = [
+    "sudo ln -sf /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/",
+    "sudo ln -sf /usr/share/fontconfig/conf.avail/10-hinting-slight.conf /etc/fonts/conf.d/",
+    "sudo ln -sf /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/",
 ]
 
 [services]
@@ -98,29 +108,9 @@ clone_dir = "/home/shrey/.extras/Colloid-gtk-theme"
 alias = "colloid-icon-theme"
 repo_url = "https://github.com/vinceliuice/Colloid-icon-theme"
 clone_dir = "/home/shrey/.extras/Colloid-icon-theme"
-[[git.list]]
-alias = "SF-Fonts"
-repo_url = "https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts"
-clone_dir = "/home/shrey/SF"
-[[git.list]]
-alias = "SF-Mono-Nerd"
-repo_url = "https://github.com/epk/SF-Mono-Nerd-Font"
-clone_dir = "/home/shrey/SF-Mono-Nerd"
 
 [git.colloid-theme]
 add_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh)"]
 del_cmds = ["(cd /home/shrey/.extras/Colloid-gtk-theme && ./install.sh -u)"]
 [git.colloid-icon-theme]
 add_cmds = ["(cd /home/shrey/.extras/Colloid-icon-theme && ./install.sh)"]
-[git.SF-Fonts]
-add_cmds = [
-    "mkdir -p /home/shrey/.local/share/fonts/",
-    "mv /home/shrey/SF/* /home/shrey/.local/share/fonts/",
-    "fc-cache",
-]
-[git.SF-Mono-Nerd]
-add_cmds = [
-    "mkdir -p /home/shrey/.local/share/fonts/",
-    "mv /home/shrey/SF-Mono-Nerd/* /home/shrey/.local/share/fonts/",
-    "fc-cache",
-]
